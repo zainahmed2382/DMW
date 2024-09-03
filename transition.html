@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+div{
+width: 100px;
+height: 100px;
+background-color: chartreuse;
+transition: width 2s;height: 4s;transition: 2s;
+animation-name: first;
+animation-duration: 8s;
+animation-delay: 2s;
+animation-iteration-count: infinite;
+position: relative;
+transition: width 2s,height: 4s,border-radius: 1s,linear 2s,transform 2s
+
+}
+
+@keyframes first{
+/* from{ background-color:peru; } 
+to{ background-color: aqua;}*/
+0%{ background-color: brown;left: 0px;top: 0px;}
+25%{background-color: chartreuse;left: 200px;top: 0px;}
+50%{background-color: yellow;left: 200px;top:200px;}
+75%{background-color: aqua;left: 0px;top: 200px;}
+100%{background-color: chocolate;left: 0px;top:0px;}
+
+
+
+
+}
+div:hover{
+/* width: 300px;
+height: 300px;
+transform: rotate(180deg); */
+border-radius: 100%;
+}
+
+
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
