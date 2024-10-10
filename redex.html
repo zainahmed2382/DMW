@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input type="text" id="fname">
+<p id="msg"></p>
+<button type="submit" onclick="func()">Submit</button>
+<script>
+function func() {
+    var name = document.getElementById("fname").value;
+    var exp = /^[A-z ]{3,20}$/gm;
+    if (exp.test(name)) {
+        document.getElementById("msg").innerHTML="valid"
+        document.getElementById("msg").style.color="green"
+
+
+    } else {
+        document.getElementById("msg").innerHTML="Invalid"
+        document.getElementById("msg").style.color="red"
+
+
+    }
+
+
+    /^[0-9+-]{11,20}$/gm
+
+
+
+
+
+
+
+}
+
+
+
+
+    
+</script>
+
+
+
+
+
+</body>
+</html>
