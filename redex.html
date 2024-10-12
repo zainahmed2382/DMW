@@ -5,10 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    .name{
+    position: absolute;
+    bottom: 70%;
+    left: 30%;
+   ;
+}
+.email{
+    position: absolute;
+    bottom: 60%;
+    left: 30%;  
+}
+.phone{
+    position: absolute;
+    bottom: 50%;
+    left: 30%;
+}
+.button{
+    position: absolute;
+    bottom: 40%;
+    left: 30%;
+}
+</style>
 <body>
-<input type="text" id="fname">
+    <input type="text" id="fname" placeholder="Enter Your Name" class="name">
 <p id="msg"></p>
-<button type="submit" onclick="func()">Submit</button>
+    <input type="text" placeholder="Enter Your Email" class="email">
+    <p id="femail"></p>
+    <input type="text" placeholder="Enter Your Phone Number" class="phone">
+<p id="fphone"></p>
+
+<button type="submit" onclick="func()" class="button">Submit</button>
 <script>
 function func() {
     var name = document.getElementById("fname").value;
@@ -24,11 +52,21 @@ function func() {
 
 
     }
+    var email =  document.getElementById("fname").value;
+    var Exp =  /^[A-z ]{10,30}@[A-z]{3,10}.[A-z]{2,6}$/gm
+    
+if (Exp.test(name)) {
+    document.getElementById("femail").innerHTML="valid"
+        document.getElementById("femail").style.color="green"
 
 
-    /^[0-9+-]{11,20}$/gm
+} else {
+    document.getElementById("femail").innerHTML="Invalid"
+        document.getElementById("femail").style.color="red"
 
 
+    
+}
 
 
 
