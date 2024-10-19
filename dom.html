@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="fname" placeholder="Enter Your Number"> 
+<p id="print"></p>
+<button type="submit" onclick="print()">Submit</button>
+
+<script>
+function print() {
+    var name = document.getElementById("fname").value;
+var num = /^[0-9]{11}$/gm;
+
+   }
+
+if (num.test(name)) {
+    document.getElementById("print").innerHTML = name;
+    document.getElementById("print").style.color = "green"; 
+    
+} else {
+    document.getElementById("print").innerHTML = Inncorrect;
+    document.getElementById("print").style.color = "red";
+}
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
