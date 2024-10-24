@@ -69,9 +69,11 @@
 
         var per = ((ob/300)*100).toFixed(2);
         document.getElementById('p_per').innerHTML = per + "%";
+        localStorage.setItem("percentage" , per);
 
         if( per >= 80 &&  per >= 100) {
             document.getElementById('p_grade').innerHTML = "A+";
+            localStorage.setItem("grade" , "A+");
         }
         else if( per >= 70 && per >=80) {
             document.getElementById('p_grade').innerHTML = "A";
