@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>STUDENTS DETAIL </h1>
+   <input type="text" name="" id="s_name" placeholder="Enter Name">
+   <input type="text" name="" id="s_ins" placeholder="Enter Institute">
+   <input type="text" name="" id="s_batch" placeholder="Enter Batch">
+ <H1>MARKS</H1>
+   <input type="text" name="" id="html_m" placeholder="Enter Html Marks">
+   <input type="text" name="" id="css_m" placeholder="Enter CSS Marks">
+   <input type="text" name="" id="js_m" placeholder="Enter JS Marks">
+   <button type="submit" onclick="marks()">Submit</button> <BR></BR>
+
+
+   <table border="2">
+    <th>name</th>
+    <th>batch</th>
+    <th>institute</th>
+    <th>html</th>
+    <th>css</th>
+    <th>js</th>
+    <th>obtained Marks</th>
+    <th>percentage</th>
+    <th>grade</th>
+    <button type="submit" onclick="remove">delete</button> <BR></BR>
+<tr>
+    <td id="p_name"></td>
+    <td id="p_batch"></td>
+    <td id="p_ins"></td>
+    <td id="p_html"></td>
+    <td id="p_css"></td>
+    <td id="p_js"></td>
+   <td id="p_ob"></td> 
+    <td id="p_per"></td>
+    <td id="p_grade"></td>
+</tr>
+
+   </table>
+
+<script>
+    function marks() {
+    
+        var name = document.getElementById('s_name').value;
+        document.getElementById('p_name').innerHTML = name;
+        localStorage.setItem("name" , name);
+        var ins = document.getElementById('s_ins').value;
+        document.getElementById('p_ins').innerHTML = ins;
+        localStorage.setItem("institue" , ins);
+        var batch = document.getElementById('s_batch').value;
+        document.getElementById('p_batch').innerHTML = batch;
+        localStorage.setItem("batch" , batch);
+        var html = document.getElementById('html_m').value;
+        document.getElementById('p_html').innerHTML = html;
+        localStorage.setItem("html" , html);
+        var css = document.getElementById('css_m').value;
+        document.getElementById('p_css').innerHTML = css;
+        localStorage.setItem("css" , css);
+        var js = document.getElementById('js_m').value;
+        document.getElementById('p_js').innerHTML = js;
+        localStorage.setItem("js" , js);
+        var ob = parseInt(html) + parseInt(css) + parseInt(js);
+        document.getElementById('p_ob').innerHTML = ob;
+        localStorage.setItem("obtain marks" , ob);
+
+        var per = ((ob/300)*100).toFixed(2);
+        document.getElementById('p_per').innerHTML = per + "%";
+
+        if( per >= 80 &&  per >= 100) {
+            document.getElementById('p_grade').innerHTML = "A+";
+        }
+        else if( per >= 70 && per >=80) {
+            document.getElementById('p_grade').innerHTML = "A";
+        }
+        else if( per >= 60 && per >=70) {
+            document.getElementById('p_grade').innerHTML = "B";
+        }
+        else if( per >= 50 && per >=60) {
+            document.getElementById('p_grade').innerHTML = "C";
+        }
+        else if( per >= 40 && per >=50) {
+            document.getElementById('p_grade').innerHTML = "D";
+        }
+        else if( per >= 0 && per >=40) {
+            document.getElementById('p_grade').innerHTML = "Fail";
+        }localStorage.setItem("grade" , grade)
+
+    }
+function remove() {
+    localStorage.removeItem("name");
+    localStorage.removeItem("institute");
+    localStorage.removeItem("batch");
+    localStorage.removeItem("html");
+    localStorage.removeItem("css");
+    localStorage.removeItem("js");
+    localStorage.removeItem("obtained");
+    localStorage.removeItem("percentage");
+    localStorage.removeItem("grade");
+    window.location.reload();
+}
+
+</script>
+
+
+
+</body>
+</html>
