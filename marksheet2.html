@@ -89,10 +89,21 @@
         }
         else if( per >= 0 && per >=40) {
             document.getElementById('p_grade').innerHTML = "Fail";
-        }
+        }localStorage.setItem("grade" , grade)
 
     }
-
+function remove() {
+    localStorage.removeItem("name");
+    localStorage.removeItem("institute");
+    localStorage.removeItem("batch");
+    localStorage.removeItem("html");
+    localStorage.removeItem("css");
+    localStorage.removeItem("js");
+    localStorage.removeItem("obtained");
+    localStorage.removeItem("percentage");
+    localStorage.removeItem("grade");
+    window.location.reload();
+}
 
 </script>
 
