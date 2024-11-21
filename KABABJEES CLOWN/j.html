@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J-Query</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+        <div>J-Query Intro !!</div>
+        <button id="hidebtn">Hide</div>
+        <button id="showbtn">Show</button>
+        <button id="togglebtn">Toggle</button>
+        <button id="slideup">Slide-Up</button>
+        <button id="slidedown">Slide-Down</button>
+        <button id="slidetoggle">Slide-Toggle</button>
+    </div>
+<script>
+    $(document).ready(function(){
+    $("div").css({ 
+        "border" : "2px groove red",
+        "background-color" :"lightblue",
+        "padding" :"20px",
+        "font-size": "30px",
+    })
+    $("#hidebtn").click(function () {
+        $("div").hide(3000)
+    })
+    $("#showbtn").click(function () {
+    $("div").show(3000)
+    })
+    $("#togglebtn").click(function () {
+    $("div").toggle(3000)
+    })
+    $("#slideup").click(function () {
+    $("div").slideUp(3000)
+    })
+    $("#slidedown").click(function () {
+    $("div").slideDown(3000)
+    })
+    $("#slidetoggle").click(function () {
+    $("div").slideToggle(3000)
+    })
+    });
+
+    
+</script>
+</body>
+</html>
