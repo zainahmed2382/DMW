@@ -41,9 +41,45 @@
     $("#slidetoggle").click(function () {
     $("div").slideToggle(3000)
     })
+      $("div").click(function () {
+        $("div").css({
+            "background-color" : "lightgreen"
+        })
+      })
+     $("div").mouseleave(function () {
+        $("div").css({
+            "background-color" : "lightblue"
+        })
+     });
+     $("div").mouseenter(function () {
+        $("div").css({
+            "background-color" : "lightgreen"
+        })
+     })
+$("div").mouseup(function () {
+    $("div").css({
+        "background-color" : "pink"
+    })
+})
+$("div").mousedown(function () {
+    $("div").css({
+        "background-color" : "  "
+    })
+})
+$("div").mouseout(function () {
+    $("div").css({
+        "background-color" : "orange"
+    })
+})
+$("div").mouseover(function () {
+    $("div").css({
+        "background-color" : "lightred"
+    })
+})
+
     });
 
-    
+  
 </script>
 </body>
 </html>
