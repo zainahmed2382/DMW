@@ -71,9 +71,24 @@ $("div").mouseout(function () {
         "background-color" : "orange"
     })
 })
-$("div").mouseover(function () {
+$("div").mouseover(function () {    
     $("div").css({
         "background-color" : "lightred"
+    })
+})
+$("body").keydown(function () {
+    $("body").css({
+        "background-color" : "red"
+    })
+})
+$("body").keyup(function () {
+    $("body").css({
+        "background-color" : "purple"
+    })
+})
+$("body").keypress(function () {
+    $("body").css({
+        "background-color" : "aqua"
     })
 })
 
